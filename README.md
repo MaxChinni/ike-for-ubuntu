@@ -14,7 +14,7 @@ This is a personal procedure that worked for some guys on their systems. Nobody 
     tar xjf ike-2.2.1-release.tbz2
     find ike/ -type f | xargs -r dos2unix
     cd ike/
-    wget https://todo-insert-patch-file-link-here
+    wget https://raw.githubusercontent.com/MaxChinni/ike-for-ubuntu/master/ike.patch
     patch -p1 < ike.patch
     apt install build-essential libssl-dev libaudio-dev libcups2-dev cmake libedit-dev g++ flex bison
     make
