@@ -19,8 +19,14 @@ This is a personal procedure that worked for some guys on their systems. Nobody 
     apt install build-essential libssl-dev libaudio-dev libcups2-dev cmake libedit-dev g++ flex bison
     make
     make install
+    mv /etc/iked.conf.sample /etc/iked.conf
 
 ## Usage
-Copy your configuration files under your `~/.ike/sites/` directory, then you can start the VPN with a command like this
 
-    ikec -r <cfg-file-name> -a
+- Copy your configuration files under your `~/.ike/sites/` directory (i.e. ``~/.ike/sites/work.vpn``)
+- Start the daemon
+
+        sudo iked
+- Connect to the VPN, i.e.
+
+        ikec -r work.vpn
