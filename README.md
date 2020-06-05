@@ -23,10 +23,10 @@ This is a personal procedure that worked for some guys on their systems. Nobody 
 
 ## Usage
 
-- Copy your configuration files under your `~/.ike/sites/` directory (i.e. ``~/.ike/sites/work.vpn``)
-- Start the daemon
+1. Copy your configuration files under your `~/.ike/sites/` directory (i.e. ``~/.ike/sites/work.vpn``)
+2. Start the daemon
 
         sudo iked
-- Connect to the VPN, i.e.
+3. Connect to the VPN, i.e.
 
         ikec -r work.vpn
