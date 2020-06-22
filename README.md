@@ -17,6 +17,7 @@ This is a personal procedure that worked for some guys on their systems. Nobody 
     wget https://raw.githubusercontent.com/MaxChinni/ike-for-ubuntu/master/ike.patch
     patch -p1 < ike.patch
     apt install build-essential libssl-dev libaudio-dev libcups2-dev cmake libedit-dev g++ flex bison
+    cmake -DCMAKE_INSTALL_PREFIX=/usr -DQTGUI=NO -DETCDIR=/etc -DNATT=YES
     make
     make install
     mv /etc/iked.conf.sample /etc/iked.conf
