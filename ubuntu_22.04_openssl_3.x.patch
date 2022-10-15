@@ -1,0 +1,47 @@
+--- ike/source/iked/ike.keyfile.cpp	2022-10-15 15:08:53.516011406 +0300
++++ ike-ubuntu-22.10/source/iked/ike.keyfile.cpp	2022-10-15 15:15:03.804396397 +0300
+@@ -860,7 +860,7 @@
+ 	if( evp_pkey == NULL )
+ 		return false;
+ 
+-	RSA *pkr=EVP_PKEY_get0_RSA(evp_pkey);
++	RSA *pkr=EVP_PKEY_get1_RSA(evp_pkey);
+ 	bool converted = prvkey_rsa_2_bdata( prvkey, pkr );
+ 	EVP_PKEY_free( evp_pkey );
+ 
+@@ -887,7 +887,7 @@
+ 	if( evp_pkey == NULL )
+ 		return false;
+ 
+-	RSA *pkr=EVP_PKEY_get0_RSA(evp_pkey);
++	RSA *pkr=EVP_PKEY_get1_RSA(evp_pkey);
+ 	bool converted = prvkey_rsa_2_bdata( prvkey, pkr );
+ 	EVP_PKEY_free( evp_pkey );
+ 
+@@ -944,7 +944,7 @@
+ 	if( evp_pkey == NULL )
+ 		return false;
+ 
+-	RSA *pkr=EVP_PKEY_get0_RSA(evp_pkey);
++	RSA *pkr=EVP_PKEY_get1_RSA(evp_pkey);
+ 	bool converted = prvkey_rsa_2_bdata( prvkey, pkr );
+ 	EVP_PKEY_free( evp_pkey );
+ 
+@@ -982,7 +982,7 @@
+ 	if( evp_pkey == NULL )
+ 		return false;
+ 
+-	RSA *pkr=EVP_PKEY_get0_RSA(evp_pkey);
++	RSA *pkr=EVP_PKEY_get1_RSA(evp_pkey);
+ 	bool converted = prvkey_rsa_2_bdata( prvkey, pkr );
+ 	EVP_PKEY_free( evp_pkey );
+ 
+@@ -1017,7 +1017,7 @@
+ 	if( evp_pkey == NULL )
+ 		return false;
+ 
+-	RSA *pkr=EVP_PKEY_get0_RSA(evp_pkey);
++	RSA *pkr=EVP_PKEY_get1_RSA(evp_pkey);
+ 	bool result = pubkey_rsa_2_bdata( pubkey, pkr );
+ 
+ 	EVP_PKEY_free( evp_pkey );
